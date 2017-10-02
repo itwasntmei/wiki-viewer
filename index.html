@@ -3,6 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>Wikipedia Viewer</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 
 <body>
@@ -11,15 +13,38 @@
 
     <div id="main">
       <div id="wiki-cont">
-        <p>enter a search term</p>
-        <div id="search-cont"></div>
+
+        <form id="wiki-form">
+          <div>
+            <label for="search-cont">enter a search term</label>
+            <input type="search" name="wiki-search" id="search-cont">
+            <input type="submit" name="wiki-submit" style="position: absolute; left: -9999px">
+          </div>
+        </form>
+
         <div id="random">
-          <a href="">or click here for a random article</a>
+          <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">or click here for a random article</a>
         </div>
+
       </div>
     </div>
 
-    <div id="results" class="hide"></div>
+    <div id="results">
+      <div class="result">
+        <h2>This is a Result</h2>
+        <h6>This is the first line of the article "This is a Result"</h6>
+      </div>
+
+      <div class="result">
+        <h2>This is a Result</h2>
+        <h6>This is the first line of the article "This is a Result"</h6>
+      </div>
+
+      <div class="result">
+        <h2>This is a Result</h2>
+        <h6>This is the first line of the article "This is a Result"</h6>
+      </div>
+    </div>
 
   </div>
 
