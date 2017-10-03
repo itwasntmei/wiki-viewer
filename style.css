@@ -5,87 +5,189 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
+html, body, div, span, applet, object, iframe, a, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 html {
   box-sizing: border-box;
 }
+
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav,
+section {
+  display: block;
 }
+
 body {
-	line-height: 1;
-  background: #eee;
+  line-height: 1;
+  background: #a7dbd5;
   font: 13px karla;
+  color: #fff;
+	overflow-x: hidden;
 }
 
 ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  list-style: none;
 }
 
-.hide {
-	display: none;
+blockquote, q {
+  quotes: none;
 }
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.appear {
+  opacity: 1!important;
+}
+
+.slide {
+	left: -100vw!important;
+}
+
 
 /* Project specific syles */
-#main {
 
+#contain {
+	position: relative;
+	height: 100vh;
+	width: 200vw;
+	left: 0;
+	transition: all ease 500ms;
+	overflow: hidden;
 }
 
 #wiki-cont {
-	width: 700px;
-	margin: 0 auto;
+  width: 700px;
+  height: 140px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+	transition: all ease 500ms;
 }
 
 #wiki-form span {
-	font: 30px arial;
+  font: 30px karla;
 }
 
 #wiki-form input {
-	
+  -webkit-appearance: none;
+  background: transparent;
+  font: 30px karla;
+  border: none;
+  border-bottom: solid 3px #fff;
+  text-align: center;
+  color: #fff;
+}
+
+#wiki-form input:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+.no-words {
+  text-align: center;
+  margin-top: 10px;
+  opacity: 0;
+  transition: all ease 300ms;
+}
+
+#random a {
+  font: 20px karla;
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  margin: 7px 0 20px;
 }
 
 #results {
-	margin: 0 auto;
+  margin: 0 auto;
+  width: 700px;
+	padding-bottom: 30px;
 }
 
 .result {
-	margin-bottom: 20px;
+  margin-bottom: 20px;
+  background: #212b2a;
+  padding: 30px;
+  border-right: solid 5px;
+  border-left: solid 5px;
+}
+
+#swiper {
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	opacity: 0;
+	font-size: 15px;
+	transition: all ease 400ms;
+}
+
+.frame-one, .frame-two {
+	width: 100vw;
+	height: 100vh;
+	position: absolute;
+	top:0;
+	bottom:0;
+}
+
+.frame-one {
+	left: 0;
+}
+
+.frame-two {
+	right: 0;
+	left:100vw;
+	overflow: auto;
+}
+a {
+	text-decoration: none;
+	color:inherit;
+}
+b {
+	font-weight: bold;
+}
+
+h1 {
+	font-size: 40px;
+	padding: 30px 0;
+	display: inline-block;
+	text-align: center;
+}
+
+h2 {
+	font-size: 30px;
+}
+
+h6 {
+	font-size: 15px;
 }
