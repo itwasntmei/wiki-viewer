@@ -70,23 +70,22 @@ table {
 }
 
 #wiki-cont {
-	width: 500px;
-	margin: 0 auto;
-}
-
-#wiki-form #search-cont {
-	display: block;
-}
-
-/*#search-cont {
-	width: 300px;
-	height: 30px;
-	border: solid 1px #000;
-	border-radius: 5px;
-}*/
-
-
-#results {
 	width: 700px;
 	margin: 0 auto;
+}
+
+#wiki-form span {
+	font: 30px arial;
+}
+
+#wiki-form input {
+	
+}
+
+#results {
+	margin: 0 auto;
+}
+
+.result {
+	margin-bottom: 20px;
 }
